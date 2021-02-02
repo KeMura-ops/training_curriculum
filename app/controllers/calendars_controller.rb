@@ -43,8 +43,7 @@ class CalendarsController < ApplicationController
       end
 
       # wday以下の記述でtimes文によって値が変化した変数wday_numをインデックス番号として配列wdaysに指定すると日付に対して適切な曜日を表示できる。
-      days = { :month => (@todays_date + x).month, :date => (@todays_date + x).day, :plans => today_plans, :wday => wdays[wday_num]}
-
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num]}
       @week_days.push(days)
     end
 
